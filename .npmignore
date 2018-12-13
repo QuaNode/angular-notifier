@@ -3,32 +3,3 @@
 
 # Build: Temp folder
 /temp
-
-# Not needed files
-/tools
-/.gitignore
-/.nvmrc
-/.sass-lint.yml
-/.travis.yml
-/browserlist
-/gulpfile.js
-/karma.config.js
-/karma-angular.config.js
-/tsconfig.json
-/tsconfig-aot.json
-/tslint.json
-
-# Test coverage
-/test-coverage
-
-# GitHub templates
-/.github
-
-# Logs
-*.log
-
-# Other
-*.todo
-*.old
-*.temp
-*.tmp
