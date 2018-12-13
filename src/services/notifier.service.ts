@@ -103,10 +103,12 @@ export class NotifierService {
 	 * @param {string} message          Message of the notification
 	 * @param {string} [notificationId] Unique ID for the notification (optional)
 	 */
-	public notify( type: string, message: string, notificationId?: string ): void {
+	public notify( type: string, title: string, message: string, icon: string, notificationId?: string ): void {
 		let notificationOptions: NotifierNotificationOptions = {
 			message,
-			type
+			type,
+			title,
+			icon
 		};
 		if ( notificationId !== undefined ) {
 			notificationOptions.id = notificationId;
