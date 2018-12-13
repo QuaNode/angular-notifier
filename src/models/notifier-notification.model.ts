@@ -23,6 +23,16 @@ export class NotifierNotification {
 	public message: string;
 
 	/**
+	 * Notificatin title
+	 */
+	public title: string;
+
+	/**
+	 * Notificatin icon
+	 */
+	public icon: string;
+
+	/**
 	 * Component reference of this notification, created and set during creation time
 	 */
 	public component: NotifierNotificationComponent;
@@ -69,5 +79,15 @@ export interface NotifierNotificationOptions {
 	 * Notificatin message
 	 */
 	message: string;
+
+	/**
+	 * Notificatin title
+	 */
+	title: string;
+
+	/**
+	 * Notificatin icon
+	 */
+	icon: string;
 
 }
