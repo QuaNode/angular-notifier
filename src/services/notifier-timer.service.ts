@@ -22,7 +22,7 @@ export class NotifierTimerService {
 	/**
 	 * Timeout ID, used for clearing the timeout later on
 	 */
-	private timerId: number;
+	private timerId: any;
 
 	/**
 	 * Promise resolve function, eventually getting called once the timer finishes
