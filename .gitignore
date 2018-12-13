@@ -1,22 +1,6 @@
 # Dependencies
 /node_modules
 
-# Build: TypeScript output
-/index.d.ts
-/index.js
-/index.js.map
-/index.metadata.json
-/src/**/*.d.ts
-/src/**/*.js
-/src/**/*.js.map
-/src/**/*.metadata.json
-
-# Build: SASS output
-/style.css
-/style.css.map
-/src/styles/**/*.css
-/src/styles/**/*.css.map
-
 # Build: Bundles
 /bundles
 
@@ -27,17 +11,3 @@
 /demo/*.js
 !/demo/systemjs.config.js
 
-# Test coverage
-/test-coverage
-
-# Development
-/.vscode
-
-# Logs
-*.log
-
-# Other
-*.todo
-*.old
-*.temp
-*.tmp
