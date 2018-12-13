@@ -7,7 +7,7 @@
 $notifier-shadow-color: rgba(0, 0, 0, .2);
 
 .x-notifier__notification--material {
-	border-radius: 3px;
+	border-radius: 10px;
 	box-shadow: 0 1px 3px $notifier-shadow-color;
 	cursor: default; // Default cursor, even when hovering over text
 	padding: {
@@ -16,6 +16,7 @@ $notifier-shadow-color: rgba(0, 0, 0, .2);
 		bottom: 10px;
 		left: 26px;
 	};
+	background-color: #FFF;
 
 	.x-notifier__notification-message {
 		display: inline-block;
@@ -25,7 +26,20 @@ $notifier-shadow-color: rgba(0, 0, 0, .2);
 		}
 		vertical-align: top;
 		line-height: 32px;
-		font-size: 15px;
+		font-size: 14px;
+		color: rgba(35, 58, 83, 0.65);
+	}
+
+	.x-notifier__notification-title {
+		display: block;
+		margin: { // Reset paragraph default styles
+			top: 0;
+			bottom: 0;
+		}
+		vertical-align: top;
+		line-height: 32px;
+		font-size: 18px;
+		font-weight: bold
 	}
 
 	.x-notifier__notification-button {
@@ -37,6 +51,8 @@ $notifier-shadow-color: rgba(0, 0, 0, .2);
 			left: 10px;
 		};
 		outline: none;
+		left: 300px;
+    	position: relative;
 		border: none;
 		background: none;
 		cursor: pointer; // Make it obvious that the "button" (or, more honestly, icon) is clickable (#UX)
@@ -57,4 +73,9 @@ $notifier-shadow-color: rgba(0, 0, 0, .2);
 
 	}
 
+}
+
+.x-notifier__notification-icon {
+	position: absolute;
+    top: 53px;
 }

@@ -182,11 +182,11 @@ export class NotifierNotificationComponent implements AfterViewInit {
 
 				// Animate notification in
 				this.setStyle( 'visibility', 'visible' );
-				this.element.animate( animationData.keyframes, animationData.options ).finished.then( () => {
+				const animation = this.element.animate( animationData.keyframes, animationData.options );
+				animation.onfinish = () => {
 					this.startAutoHideTimer();
 					resolve(); // Done
-				} );
-
+				};
 			} else {
 
 				// Show notification
@@ -213,7 +213,10 @@ export class NotifierNotificationComponent implements AfterViewInit {
 			// Are animations enabled?
 			if ( this.config.animations.enabled && this.config.animations.hide.speed > 0 ) {
 				const animationData: NotifierAnimationData = this.animationService.getAnimationData( 'hide', this.notification );
-				this.element.animate( animationData.keyframes, animationData.options ).finished.then( resolve ); // Done
+				const animation = this.element.animate( animationData.keyframes, animationData.options );
+				animation.onfinish = () => {
+					resolve(); // Done
+				};
 			} else {
 				resolve(); // Done
 			}
@@ -259,7 +262,10 @@ export class NotifierNotificationComponent implements AfterViewInit {
 					}
 				};
 				this.elementShift = newElementShift;
-				this.element.animate( animationData.keyframes, animationData.options ).finished.then( resolve ); // Done
+				const animation = this.element.animate( animationData.keyframes, animationData.options );
+				animation.onfinish = () => {
+					resolve(); // Done
+				};
 			} else {
 				this.setStyle( 'transform', `translate3d( ${ horizontalPosition }, ${ newElementShift }px, 0 )` );
 				this.elementShift = newElementShift;
